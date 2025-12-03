@@ -1,0 +1,22 @@
+@Library("Shared") _
+
+pipeline {
+    agent { label 'rs' }
+
+    stages {
+        stage('Hello') {
+            steps {
+                script{
+                    hello()
+                }
+               
+            }
+        }
+
+        stage('Bye') {
+            steps {
+                echo 'Bye bye'
+            }
+        }
+    }
+}
